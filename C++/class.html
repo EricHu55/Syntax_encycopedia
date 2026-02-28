@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .code {width:70%;
+            border:1px red solid;
+            }
+        .note {background-color:yellow;}
+        .breakdown {border:1px solid blue;
+            background-color:aqua;
+            width:70%;}
+        .syntax {color:blueviolet;}
+        .layout {color:darkred}
+        .extra {background-color:black;
+            color:azure;}
+        .mid {text-align:center;}
+    </style>
+</head>
+<body>
+    <a href="#a1">Basic class creation and execution</a> <br>
+    <a href="#a2">Using getter and setter function</a><br>
+    <a href="#a3">class implementation separation</a> <br>
+    <a href="#a4">Class member access via obj, reference, pointer</a><br>
+    <a href="#a7">class complication / has a relationship</a><br>
+    <a href="#a8">friend function</a><br>
+    <a href="#a9">class static member</a><br>
+
+
+
+
+<!--basic class creation and execution-->
+    <div id="a1" class="code">
+        <p class="mid">Basic class creation and execution</p>
+        <img src="syntax/basic_class_layout.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">Code breakdown</summary>
+        <dl>
+            <dt class="syntax">create class: class_name{ <br>
+            constructor: class_name(datatype var_name) <br>
+            member initialization: mem_name = var_name <br>
+            setter function: void set mem_name(var datatype var_name_
+            getter function: var_name_datatype getMem_name())
+            create object: class_name obj_name(parameter(s))
+            </dt>
+                <dd>class : Initiates the creation of a class <br>
+                    class_name : name of the class <br>
+                    datatype : datatype of the variable <br>
+                    var_name : the name of the variable that is assigned to a member <br>
+                    mem_name : the name of the member of the class
+                    void : a datatype that returns nothing from the function <br>
+                    set : Set function that allows user to maniputlate data of the private member <br>
+                    get : getter function that allows user to retrieve the value of the member<br>
+                    obj_name : Name of the object (a unique variable that uses the class to create a blueprint)
+                    </dd>
+            <dt></dt>
+        </dl>
+    </details>
+<!--using getter and setter function-->
+    <div id="a2" class="code">
+        <p class="mid">using getter and setter</p>
+        <img src="syntax/get_set_functions.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">get Member value: obj.get Mem_name() <br>
+                set data to member : obj.setMem_name(value)</dt>
+                <dd class="layout">obj : the name of the object the members are stored in <br>
+                    get : Functon to retrieve the member name from the object <br>
+                    Mem_name : The name of the member <br></dd>
+                    set : function to input value into the member <br>
+            <dt></dt>
+        </dl>
+    </details>
+<!--class implementation separation-->
+    <div id="a3" class="code">
+        <p class="mid">Seperation of header and implementation</p>
+        <img src="syntax/class_complication.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">import header file: #include "header.h" <br>
+                create constructor : class_name::class_name(parameters) <br>
+                create setter function: void class_name:: setMem_name(datatype var_name){ <br>
+                create getter function: member datatype class_name:: getMem_name(){</dt>
+                    <dd class="layout">#include : function to import a library or header file <br>
+                        "header.h" : imports header file of class to access and manipulate class <br>
+                        scope resolution operator (::) : indicates the following function exists withing the class and is not an undefined variable or function 
+                    </dd>
+        </dl>
+    </details>
+<!--Class member access via obj, reference, pointer-->
+    <div id="a4" class="code">
+        <p class="mid">object access via object, reference, and pointer</p>
+        <img src="syntax/object_access_via_ref_obj_pointer.jpg" height="200">
+    </div>
+    <details class="code">
+        <summary class="note">code breakdown</summary>
+    </details>
+<!--class constructor with default arguments-->
+    <div class="code">
+        <p class="mid">constructor with default arguments</p>
+        <img src="syntax/constructor_default_arguments.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>Note:</dt>
+                <dd class="extra">default arguments is when the parameters in the constructor are assigned a value at
+                    initialization. This automatically fills in any undefined arguements when creating an object. If the user
+                    enters a value for the parameter when creating the object then the default parameter is overidden, else
+                    the default parameter is used in its place
+                </dd>
+        </dl>
+    </details>
+    <details class="code">
+        <summary class="note">code breakdown</summary>
+    </details>
+
+<!--class composition-->
+    <div id="a7" class="code">
+        <p class="mid">class composition : class relationship</p>
+        <img src="syntax/class_composition.jpg" height="300">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>note:</dt>
+                <dd class="extra">class composition is when one class retrieves and uses members from
+                    another class. This is a one way operation
+                </dd>
+        </dl>
+    </details>
+<!--Friend function-->
+    <div id="a8" class="code">
+        <p class="mid">Creation of friend function</p>
+        <img src="syntax/friend_function.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>note:</dt>
+                <dd class="extra">friend function is a method for a user access the members of a class 
+                    without having to create a getter function in the class. This way the members could be 
+                    accessed and it would only be avaialable to that function and not to the entire program
+                    to use 
+                    __NOTE!!!!!: Get method makes the member available for the entire program to use 
+                    __Friend functions are not mutual meaning information of both class and function are not 
+                    sharing with eachother
+                </dd>
+        </dl>
+    </details>
+<!--class static members-->
+    <div id="a9" class="code">
+        <p class="mid">class static members</p>
+        <img src="syntax/class_static_members.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>note:</dt>
+                <dd class="extra">static members are when it can affect all created instances(objects) 
+                    but only one instance would be created. Usually a copy of all the members of the class 
+                    is created for each created instance. However for a static member, it can be called in the 
+                    constructor, but no matter how many instances are created only one instance of the static 
+                    member will exist
+                </dd>
+            <dt>Rules:</dt>
+                <dd>1) static members cannot access information from non-static members <br>
+                    2) only static functions can access the static member <br>
+                    3) static members are only initialized in the class to alert the compiler of it's existance, but 
+                        it is not defined in the class <br>
+                    ____The static member is defined outside of the class but before the main function <br>
+                    ____static memeber is defined in the driver file <br>
+                    ____purpose is to act like a global variable being called to store changes caused from loops</dd>
+        </dl>
+    </details>
+<!--operator overloading-->
+    <div class="code">
+        <p class="mid">operator overloading</p>
+        <img src="syntax/operator_overloading.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="breakdown">
+            <details>
+                <summary>overloading operator+</summary>
+            </details>
+            <details>
+                <summary>overloading operator +=</summary>
+            </details>
+            <details>
+                <summary>overloading operator ==</summary>
+            </details>
+            <details>
+                <summary>operator overloading >></summary>
+            </details>
+        </summary>
+    </details>

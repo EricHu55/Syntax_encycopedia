@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .code {width:70%;
+            border:1px red solid;
+            }
+        .note {background-color:yellow;}
+        .breakdown {border:1px solid blue;
+            background-color:aqua;
+            width:70%;}
+        .syntax {color:blueviolet;}
+        .layout {color:darkred}
+        .extra {background-color:black;
+            color:azure;}
+        .mid {text-align:center;}
+    </style>
+</head>
+<body>
+<!--variable declaration and initialization-->
+    <div class="code">
+        <p class="mid">variable declaration and initialization</p>
+        <img src="syntax/variable_creation.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">Code breakdown: variable declaration (left img</summary>
+        <dl>
+            <dt>Line 1: call library</dt>
+            <dt>Line 2: use namespace</dt>
+                <dd>This removes the need of calling std on every line of code</dd>
+            <dt>Line 4: initialize main library</dt>
+                <dd>Performs code execution</dd>
+            <dt>Lines 6,7: variable declaration</dt>
+                <dd>Creates variables with the assigned datatype but no data is stored in the variables yet</dd>
+            <dt>Lines 9-10: Assisgn variables</dt>
+                <dd>If variables have been declared, assigining of variable is not required</dd>
+        </dl>
+    </details>
+    <details class="breakdown">
+        <summary class="note">code breakdown: variable initialization (right img)</summary>
+        <dl>
+            <dt>Line 1: call library</dt>
+                <dd>Control input and output</dd>
+            <dt>Line 2: use namespace</dt>
+                <dd>Removes the need of calling the namespace for each line execution</dd>
+            <dt>Line 4: initialize main function</dt>
+                <dd>control code execution</dd>
+            <dt>Lines 6-7: variable initialization</dt>
+                <dd>This is when creating variables and providing a value to be stored into the variable</dd>
+        </dl>
+    </details>
+<!--concatenation-->
+    <div class="code">
+        <p class="mid">concatenation</p>
+        <img src="syntax/concatenation.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>Line 1: calling library</dt>
+                <dd>Controls input and output</dd>
+            <dt>Line 2: use namespace</dt>
+                <dd>removes the need of calling std on every line</dd>
+            <dt>Line 4: call main function</dt>
+                <dd>controls code execution</dd>
+            <dt>Lines 6-7: variable initialization</dt>
+                <dd>create variable with assigned stored values</dd>
+            <dt>Line 9: concatenation</dt>
+                <dd>Every << indicates a new datatype to output</dd>
+                <dd class="extra"> cout = output message <br>
+                    << : output new datatype value here <br>
+                    </dd>
+        </dl>
+    </details>
+<!--Datatypes-->
+    <div class="code">
+        <p class="mid">Datatypes and identifying datatypes of variables</p>
+        <img src="syntax/datatypes.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt>Line 1: Call library iostream</dt>
+            <dt>Line 2: call library typeinfo</dt>
+                <dd>library to help determine the datatype of a variable during runtime</dd>
+            <dt>Line 3: using namespace std</dt>
+                <dd>removes the need of calling std on every line</dd>
+            <dt>Line 5: initialize main function</dt>
+                <dd>controls code execution</dd>
+            <dt>Lines 7-12: variable initialization</dt>
+                <dd>Creates variables with the datatype and a stored value at creation</dd>
+            <dt>Lines 14-19: variable datatype identification</dt>
+                <dd>Using typeid(variable).name() to determine the datatype of a variable</dd>
+                <dd class="extra">typeid(variable) : returns the datatype of the variable <br>
+                    .name() : returns the name of the datatype</dd>
+        </dl>
+    </details>
+<!--user input(s)-->
+    <div class="code">
+        <p class="mid">User input</p>
+        <img src="syntax/input(s).jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">multiple user input: cin >> var1 >> var2 >> varn</dt>
+                <dd class="layout">cin : syntax for user input <br>
+                    >> : indicates the next variable to store the input <br>
+                    var1, var2, varn : variables to store the user input</dd>
+            <dt>Line 2: call iostream</dt>
+                <dd>controls input and output</dd>
+            <dt>Line 3: using namespace std</dt>
+                <dd>removes the need of calling std on every line</dd>
+            <dt>Line 5: initialize main function</dt>
+                <dd>controls code execution</dd>
+            <dt>line 6: multiple variable declaration</dt>
+                <dd>creates multiple variables with the same datatype</dd>
+            <dt>line 8: multiple user input</dt>
+                <dd>stores user input into multiple variables</dd>
+        </dl>
+    </details>
+<!--constant variable-->
+    <div class="code">
+        <p class="mid">constant variable</p>
+        <img src="syntax/constant variable.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">const datatype var_name = value</dt>
+                <dd class="layout">const : syntax to make the variable immutable during runtime <br>
+                    datatype : The datatype the variable is made to store <br>
+                    var_name : name of the variable <br>
+                    element : The element that will be stored into the variable</dd>
+            <dt>Line 2: import C++ library</dt>
+                <dd>iostream is the library that controls input and output syntax</dd>
+            <dt>Line 3: using namespace</dt>
+            <dt>Line 5: main function</dt>
+                <dd>Location of code execution</dd>
+            <dt>Line 7: creation of constant variable</dt>
+                <dd>Variable will be immutable</dd>
+                <dd class="extra">constant variables must contain a value at initialization</dd>
+            <dt>note:</dt>
+                <dd class="extra">1) const variables are read only variables <br>
+                    2) attempting to modify a constant variable will result in an error</dd>
+        </dl>
+    </details>
+<!--refernece variable-->
+    <div class="code">
+        <p class="mid">reference variable</p>
+        <img src="syntax/reference variable.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax"> reference variable : &var_name</dt>
+                <dd class="layout"> & : This is the syntax that the location of the variable is targeted rather than the value <br>
+                    var_name : name of the variable</dd>
+            <dt>Line 2: import library</dt>
+                <dd>iostream controls imput and output syntax</dd>
+            <dt>Line 3: using namespace</dt>
+                <dd>remove the need to call std on every line</dd>
+            <dt>Line 5: main function</dt>
+                <dd>location where code execution takes place</dd>
+            <dt>Line 6: initialization of variables</dt>
+                <dd>Initializaes three variables together because they are the same type</dd>
+            <dt> Line 8: variable referencing</dt>
+                <dd>The value and memory address of variable students are stored into the variable counter</dd>
+                <dd class="extra">In a sense you can say that variables student and counter are treated as one varibale</dd>
+            <dt>analysis: </dt>
+                <dd class="extra"> As we can see in the entire code, counter is being incremented within the while loop. However students does
+                    not have any form of changing its value. But after when the loop is completed, whatever changes that were 
+                    made to counter have also affected varibale students as well
+                </dd>
+            <dt>notes: </dt>
+                <dd class="extra">1) both the reference variable and the referenced variable are identical <br>
+                    2) Changes applied to one variable will affect the other variable as well <br>
+                    3) Modifying the referenced variale also modifies the original variable</dd>
+        </dl>
+    </details>
+<!--create and access pointer-->
+    <div class="code">
+        <p class="mid">create pointer</p>
+        <p class="mid">access pointed location and value</p>
+        <img src="syntax/create and access pointer location and value.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax"> create pointer : *ptr_name = &var_name <br>
+                access pointed variable location : ptr_name <br>
+                access pointed variable element : *ptr_name</dt>
+                <dd class="layout"> *ptr_name: initializes pointer <br>
+                    &var_name : saves memory location of variable</dd>
+                <dd class="extra">1) Access a pointer is simply calling the pointer name without the asterick</dd>
+            <dt>Lines 1-3 : import libraries</dt>
+            <dt>Line 4 : using namespace std</dt>
+                <dd>Access the standard library containing functions, class, objects</dd>
+            <dt>Line 6: main function</dt>
+                <dd>section that executes code, the driver function</dd>
+            <dt>Line 10: create pointer</dt>
+                <dd>Pointer can only store the location of the pointed variable</dd>
+            <dt>Line 12: Access pointer location</dt>
+                <dd>Calling the pointer name will return the memory location of the pointed variable</dd>
+            <dt>Line 13: Access pointer value</dt>
+                <dd>Using the asterick on a pointer causes indirection and returns the value of the pointed variable</dd>
+            <dt>Line 15: change pointer value</dt>
+                <dd>Changing the value of the pointer changes the value of the pointed variable as well</dd>
+                <dd class="extra">You need to dereference the pointer before you can change the value of the pointer, else you
+                    would be trying to change the value of the memory location</dd>
+        </dl>
+    </details>
+<!--constant pointer and pointed pairings-->
+<!--unique pointer creation-->
+    <div class="code">
+        <p class="mid"> create unique pointer</p>
+        <img src="syntax/unique_ptr_create_and_move.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">create unique pointer: unique_ptr<d_type>name = make_unique<d_type>(val) <br>
+                transfer ownership : unique_ptr<d_type>name = move(ptr)</dt>
+                    <dd class="layout">unique_ptr : syntax to initiate the unique pointer <br>
+                        d_type = datatype assigned to the pointer <br>
+                        name : name of the pointer <br>
+                        make_unique : function to create a unique pointer</dd>
+                <dt>note:</dt>
+                    <dd class="extra">1)unique pointers cannot be shared meaning a unique pointer cannot be assigned to another unique pointer <br>
+                        2) when moving pointers the ownership of the first pointer is transferred to the indicated poinnter <br>
+                        ___this means the memory address and value is transferred to the new pointer and the original pointer becomes a null pointer <br>
+                        ___null pointer address is 0000000</dd>
+        </dl>
+    </details>
+<!--unique pointer memory allocation-->
+    <div class="code">
+        <p class="mid">unique pointer memory allocation</p>
+        <img src="syntax/unique_ptr_memory_allocation.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt> note: </dt>
+                <dd class="extra">1) unique pointers immediately deletes the pointer after the scope have been exited</dd>
+        </dl>
+    </details>
+<!--shared pointer-->
+    <div class="code">
+        <p class="mid">shared pointer</p>
+        <img src="syntax/shared_pointer.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">create shared pointer : shared_ptr <d_type>name = make_shared<d_type>(value) <br>
+                add ownership : shared_ptr<d_type>name = name_ptr</dt>
+                    <dd class="layout"> shared_ptr : syntax to initiate creation of shared pointer <br>
+                        d_type : datatype of the pointer <br>
+                        name = name of the pointer <br>
+                        make_shared : syntax to create a shared pointer <br>
+                        name_ptr : The name of the pointer that is being shared</dd>
+                <dt> note: </dt>
+                    <dd class="extra">1) Shared pointers can be shared with others meaning duplicates can be created <br>
+                        2) Each duplicate uses the same memory location as the original <br>
+                        3) shared pointers memory deallocate when the total number of ownerships reduce to 0</dd>
+        </dl>
+    </details>
+<!--weak pointer-->
+</body>

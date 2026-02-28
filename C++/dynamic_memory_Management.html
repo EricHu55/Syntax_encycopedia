@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .code {width:70%;
+            border:1px red solid;
+            }
+        .note {background-color:yellow;}
+        .breakdown {border:1px solid blue;
+            background-color:aqua;
+            width:70%;}
+        .syntax {color:blueviolet;}
+        .layout {color:darkred}
+        .extra {background-color:black;
+            color:azure;}
+        .mid {text-align:center;}
+    </style>
+</head>
+<body>
+    <a href="#a1">Heap variable</a> <br>
+    <a href="#a2">Heap array</a> <br>
+    
+<!--New and return operators-->
+    <div id="a1" class="code">
+        <p class="mid">new and return operator</p>
+        <img src="syntax/new_and_delete_operator.jpg" height="200">
+    </div>
+    <details class="breakdown">
+        <summary class="note">code breakdown</summary>
+        <dl>
+            <dt class="syntax">create new item: d_type* name = new d_type(element) <br>
+                delete heap variable: delete heap_var</dt>
+            <dd class="layout">d_type : datatype of the value assigned to the variable <br>
+                * name : This creates a pointer and name is the name of the pointer <br>
+                element : the element being assigned to the pointer</dd>
+            <dt> note: </dt>
+                <dd class="extra">1) heap values can only be created with pointers <br>
+                    2) heap values are not assigned to a variable but memory is allocated to it as it is being executed on runtime <br>
+                    ____That is why heap values are assigned to pointers and the pointer is not pointed to a known existing variable <br>
+                    3) Heap variables acts similar to normal variables with the exception that heap variables do not get deleted automatically 
+                after the execution of a function</dd>
+        </dl>
+    </details>
+<!--heap array-->
+    <div id="a2"class="code">
+        <p class="mid">heap array</p>
+        <img src="syntax/heap_array.jpg" height="200">
+    </div>
+</body>
